@@ -1,0 +1,11 @@
+<%- include("header.ejs") -%> <% posts.forEach(post=> { %>
+<div class="post">
+  <h2><%= post.title %></h2>
+  <p>
+    <%= post.description.substring(0, 100) + " ..." %><a
+      href="/posts/<%= post.title %>"
+      >Read more</a
+    >
+  </p>
+</div>
+<% })%> <%- include("footer.ejs") -%>
